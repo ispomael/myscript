@@ -7,5 +7,5 @@ function handleResponse() {
     var changeReq = new XMLHttpRequest();
     changeReq.open('put', '/settings/general/edit-profile', true);
     changeReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    changeReq.send('_token='+token+'&_method=PUT&last_name=Ahauka&first_name=Makuri&date_de_naissance=1992-11-05&nationalite=BE&email=tesyt@csrf-ahahah.com&phone=0499999999')
+    changeReq.send('_token='+token+'&_method=PUT&last_name=Ahauka&first_name=Makuri&date_de_naissance=1992-11-05&nationalite=BE&email=tesyt@csrf-ahahah.com&phone=0499999999');
 };
